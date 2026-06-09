@@ -5,12 +5,12 @@ const OPENROUTER_MODEL = 'xiaomi/mimo-v2-flash';
 const TIMEOUT_MS = 8000;
 
 const VIBE_LABELS: Record<string, string> = {
-  free_spirited: 'Free-spirited',
-  magnetic: 'Magnetic',
-  dreamy: 'Dreamy',
-  bold: 'Bold',
-  curious: 'Curious',
-  grounded: 'Grounded',
+  free_spirited: 'Lightens up any room, makes others feel at ease',
+  magnetic: 'Quietly magnetic — hard to explain, impossible to ignore',
+  dreamy: 'Always somewhere in their own head, beautifully',
+  bold: 'First to say yes, first to arrive',
+  curious: 'Always noticing what everyone else misses',
+  grounded: 'Steady, present, knows exactly who they are',
 };
 
 const SCENE_LABELS: Record<string, string> = {
@@ -32,12 +32,12 @@ const HOW_PEOPLE_SEE_LABELS: Record<string, string> = {
 };
 
 const SCENT_DRAW_LABELS: Record<string, string> = {
-  unfolds: 'Something that unfolds — different every hour',
-  one_note: 'That one note you can\'t stop smelling',
-  clean_real: 'Clean and real, nothing artificial',
-  warm_familiar: 'Warm and familiar, like a memory',
-  unexpected: 'Something unexpected, almost wrong',
-  bright_instant: 'Bright and instant — a mood in one spray',
+  unfolds: 'Wants to feel transported — like being somewhere else entirely',
+  one_note: 'Wants a scent that pulls them back again and again',
+  clean_real: 'Wants to feel clean and effortless',
+  warm_familiar: 'Wants to feel wrapped up in something warm',
+  unexpected: 'Wants something surprising, even to themselves',
+  bright_instant: 'Wants to feel bright and lifted',
 };
 
 const SCENT_GENDER_LABELS: Record<string, string> = {
@@ -47,12 +47,12 @@ const SCENT_GENDER_LABELS: Record<string, string> = {
 };
 
 const SCENT_MEMORY_LABELS: Record<string, string> = {
-  rain: 'Rain hitting warm pavement',
-  sweet_kitchen: "Someone's kitchen, sweet and warm",
-  flower_market: 'A flower market at 7am',
-  old_paper: 'Old paper, ink, a quiet room',
-  salt_air: 'Salt air and open sky',
-  warm_wax: 'Warm wax, low light, a good book',
+  rain: 'First rain hitting hot pavement',
+  morning_coffee: 'Morning coffee, steam still rising',
+  fresh_jasmine: 'Fresh jasmine, just picked',
+  temple_incense: 'Temple incense, slow and heavy',
+  spice_market: 'Night market — smoke, spice, all of it',
+  sun_dried_sheets: 'Clean sheets dried under the sun',
 };
 
 const HIDDEN_SELF_LABELS: Record<string, string> = {
