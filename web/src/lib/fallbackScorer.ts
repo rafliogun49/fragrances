@@ -17,11 +17,11 @@ const SCENT_GENDER_TO_PRODUCT_GENDER: Record<string, string> = {
 
 const SCENT_MEMORY_BOOSTS: Record<string, string[]> = {
   rain: ['green', 'fresh', 'aquatic'],
-  sweet_kitchen: ['vanilla', 'sweet', 'gourmand'],
-  flower_market: ['floral', 'rose', 'jasmine'],
-  old_paper: ['woody', 'leather', 'musk'],
-  salt_air: ['aquatic', 'marine', 'fresh'],
-  warm_wax: ['amber', 'warm', 'vanilla'],
+  morning_coffee: ['vanilla', 'warm', 'gourmand'],
+  fresh_jasmine: ['floral', 'jasmine', 'white floral'],
+  temple_incense: ['oud', 'amber', 'incense'],
+  spice_market: ['spice', 'woody', 'oud'],
+  sun_dried_sheets: ['musk', 'clean', 'fresh'],
 };
 
 const VIBE_TO_PERSONA: Record<string, string> = {

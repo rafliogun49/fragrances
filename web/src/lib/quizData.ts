@@ -82,11 +82,11 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
     questionKey: 'q_scent_memory',
     options: [
       { value: 'rain', labelKey: 'o_rain' },
-      { value: 'sweet_kitchen', labelKey: 'o_sweet_kitchen' },
-      { value: 'flower_market', labelKey: 'o_flower_market' },
-      { value: 'old_paper', labelKey: 'o_old_paper' },
-      { value: 'salt_air', labelKey: 'o_salt_air' },
-      { value: 'warm_wax', labelKey: 'o_warm_wax' },
+      { value: 'morning_coffee', labelKey: 'o_morning_coffee' },
+      { value: 'fresh_jasmine', labelKey: 'o_fresh_jasmine' },
+      { value: 'temple_incense', labelKey: 'o_temple_incense' },
+      { value: 'spice_market', labelKey: 'o_spice_market' },
+      { value: 'sun_dried_sheets', labelKey: 'o_sun_dried_sheets' },
     ],
   },
   {
