@@ -1,0 +1,15 @@
+node_modules/
+dist/
+web/dist/
+.wrangler/
+.dev.vars
+*.local
+.env
+
+# Internal planning docs
+PRD.md
+DESIGN-airbnb.md
+Catalogue-HMNS.pdf
+
+# Raw extracted data (already in migrations)
+data/

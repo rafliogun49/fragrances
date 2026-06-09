@@ -1,0 +1,13 @@
+name = "hmns-recommender"
+main = "server/src/index.ts"
+compatibility_date = "2024-11-01"
+compatibility_flags = ["nodejs_compat"]
+
+[assets]
+directory = "web/dist"
+binding = "ASSETS"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "hmns-db"
+database_id = "fcdaf03d-eaa8-41c5-ac3c-cc3e896ee7a9"
