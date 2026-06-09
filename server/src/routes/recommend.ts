@@ -51,7 +51,7 @@ recommendRouter.post(
     let fallbackUsed = false;
 
     try {
-      const result = await callDeepSeek(c.env.DEEPSEEK_API_KEY, answers, products);
+      const result = await callDeepSeek(c.env.OPENROUTER_API_KEY, answers, products);
       const allIds = [result.primary_id, ...result.alternate_ids];
       const fetched = await getProductsByIds(c.env.DB, allIds);
 

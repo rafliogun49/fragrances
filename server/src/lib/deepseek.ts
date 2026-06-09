@@ -1,6 +1,7 @@
 import type { Product, QuizAnswers } from '../types';
 
-const DEEPSEEK_URL = 'https://api.deepseek.com/chat/completions';
+const OPENROUTER_URL = 'https://openrouter.ai/api/v1/chat/completions';
+const OPENROUTER_MODEL = 'anthropic/claude-haiku-4-5';
 const TIMEOUT_MS = 8000;
 
 const VIBE_LABELS: Record<string, string> = {
@@ -94,7 +95,7 @@ function humanizeAnswers(answers: QuizAnswers): string {
       ? `Notes they love: ${answers.notes_love.join(', ')}`
       : null,
     answers.notes_avoid?.length
-      ? `Notes to avoid (do NOT recommend products heavy in these): ${answers.notes_avoid.join(', ')}`
+      ? `*** HARD RULE — NEVER recommend any product containing these notes: ${answers.notes_avoid.join(', ')} ***`
       : null,
     `Response language: ${lang === 'id' ? 'Bahasa Indonesia' : 'English'}`,
   ].filter(Boolean).join('\n');
@@ -151,6 +152,7 @@ Rules:
 - explanation: 2–3 sentences written directly to the customer (use "you"), referencing their persona and why this fragrance fits who they are
 - alt_explanations: array of exactly 2 short (1 sentence each) explanations for the alternates
 - ${langInstruction}
+- If the customer profile lists notes to avoid, you MUST NOT include any product that contains those notes in primary_id or alternate_ids. This is a strict rule — violating it is a critical error.
 
 Response schema:
 {"primary_id": number, "alternate_ids": [number, number], "explanation": "string", "alt_explanations": ["string", "string"]}`;
@@ -161,14 +163,14 @@ Response schema:
   const timeoutId = setTimeout(() => controller.abort(), TIMEOUT_MS);
 
   try {
-    const res = await fetch(DEEPSEEK_URL, {
+    const res = await fetch(OPENROUTER_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${apiKey}`,
       },
       body: JSON.stringify({
-        model: 'deepseek-chat',
+        model: OPENROUTER_MODEL,
         messages: [
           { role: 'system', content: systemPrompt },
           { role: 'user', content: userMessage },
@@ -181,14 +183,14 @@ Response schema:
     });
 
     if (!res.ok) {
-      throw new Error(`DeepSeek API error: ${res.status}`);
+      throw new Error(`OpenRouter API error: ${res.status}`);
     }
 
     const data = await res.json() as {
       choices: Array<{ message: { content: string } }>;
     };
     const content = data.choices?.[0]?.message?.content;
-    if (!content) throw new Error('Empty DeepSeek response');
+    if (!content) throw new Error('Empty OpenRouter response');
 
     const parsed = JSON.parse(content) as DeepSeekResult;
     if (
