@@ -83,22 +83,18 @@ type Translations = {
   o_more_playful: string;
 
   // Q9 + Q10 note options
-  o_note_rose: string;
-  o_note_vanilla: string;
+  o_note_floral: string;
   o_note_jasmine: string;
-  o_note_musk: string;
-  o_note_iris: string;
-  o_note_oud: string;
   o_note_citrus: string;
-  o_note_wood: string;
   o_note_fruity: string;
-  o_note_vetiver: string;
-  o_note_fresh: string;
-  o_note_spice: string;
-  o_note_lavender: string;
-  o_note_tobacco: string;
   o_note_marine: string;
-  o_note_gourmand: string;
+  o_note_lavender: string;
+  o_note_vanilla: string;
+  o_note_musk: string;
+  o_note_oud: string;
+  o_note_wood: string;
+  o_note_spice: string;
+  o_note_tobacco: string;
 
   // Email gate
   matchReady: string;
@@ -200,22 +196,18 @@ export const t: Record<Lang, Translations> = {
     o_softer: "I'm softer than I seem",
     o_more_playful: "I'm way more playful when I feel safe",
 
-    o_note_rose: 'Rose',
-    o_note_vanilla: 'Vanilla',
+    o_note_floral: 'Floral',
     o_note_jasmine: 'Jasmine / White Floral',
-    o_note_musk: 'Musk / Amber',
-    o_note_iris: 'Powdery / Iris',
-    o_note_oud: 'Oud / Incense',
-    o_note_citrus: 'Citrus / Bergamot',
-    o_note_wood: 'Sandalwood / Cedar',
-    o_note_fruity: 'Fruity / Peach',
-    o_note_vetiver: 'Vetiver / Earthy',
-    o_note_fresh: 'Green / Nature',
-    o_note_spice: 'Spice / Pepper',
+    o_note_citrus: 'Citrus',
+    o_note_fruity: 'Fruity',
+    o_note_marine: 'Marine / Watery',
     o_note_lavender: 'Lavender / Herbs',
+    o_note_vanilla: 'Vanilla',
+    o_note_musk: 'Musk / Amber',
+    o_note_oud: 'Oud / Incense',
+    o_note_wood: 'Woody',
+    o_note_spice: 'Spice / Pepper',
     o_note_tobacco: 'Tobacco / Leather',
-    o_note_marine: 'Marine / Sea Salt',
-    o_note_gourmand: 'Gourmand / Sweet',
 
     matchReady: 'Your match is ready.',
     matchReadySub: 'Enter your email to see your results — we\'ll save your personalised recommendation.',
@@ -313,22 +305,18 @@ export const t: Record<Lang, Translations> = {
     o_softer: 'Aku lebih lembut dari yang tampak',
     o_more_playful: 'Aku jauh lebih playful ketika merasa aman',
 
-    o_note_rose: 'Rose / Mawar',
-    o_note_vanilla: 'Vanilla',
+    o_note_floral: 'Floral',
     o_note_jasmine: 'Jasmine / Bunga Putih',
-    o_note_musk: 'Musk / Amber',
-    o_note_iris: 'Powdery / Iris',
-    o_note_oud: 'Oud / Kemenyan',
-    o_note_citrus: 'Citrus / Jeruk',
-    o_note_wood: 'Sandalwood / Cedar',
-    o_note_fruity: 'Buah / Persik',
-    o_note_vetiver: 'Vetiver / Tanah',
-    o_note_fresh: 'Hijau / Alam',
-    o_note_spice: 'Rempah / Lada',
+    o_note_citrus: 'Citrus',
+    o_note_fruity: 'Buah / Fruity',
+    o_note_marine: 'Marine / Watery',
     o_note_lavender: 'Lavender / Herbal',
+    o_note_vanilla: 'Vanilla',
+    o_note_musk: 'Musk / Amber',
+    o_note_oud: 'Oud / Kemenyan',
+    o_note_wood: 'Woody / Kayu',
+    o_note_spice: 'Rempah / Lada',
     o_note_tobacco: 'Tembakau / Kulit',
-    o_note_marine: 'Marine / Laut',
-    o_note_gourmand: 'Gourmand / Manis',
 
     matchReady: 'Parfummu sudah siap.',
     matchReadySub: 'Masukkan emailmu untuk melihat hasilmu — kami akan menyimpan rekomendasimu.',
