@@ -233,9 +233,11 @@ function QuizPage() {
                     placeholder={tr.customNotePlaceholder}
                     className="flex-1 px-4 py-3 border rounded-md text-sm outline-none transition-all"
                     style={{
+                      backgroundColor: 'var(--color-surface-soft)',
                       borderColor: 'var(--color-hairline)',
                       borderRadius: 'var(--r-sm)',
                       color: 'var(--color-ink)',
+                      colorScheme: 'dark',
                     }}
                     onFocus={e => (e.target.style.borderColor = 'var(--color-primary)')}
                     onBlur={e => {

@@ -50,9 +50,11 @@ export function EmailGate({ answers, lang, onSuccess }: EmailGateProps) {
           placeholder={tr.emailPlaceholder}
           className="w-full px-4 py-3 border rounded-md text-base outline-none transition-all"
           style={{
+            backgroundColor: 'var(--color-surface-soft)',
             borderColor: 'var(--color-hairline)',
             borderRadius: 'var(--r-sm)',
             color: 'var(--color-ink)',
+            colorScheme: 'dark',
           }}
           onFocus={e => (e.target.style.borderColor = 'var(--color-primary)')}
           onBlur={e => (e.target.style.borderColor = 'var(--color-hairline)')}
