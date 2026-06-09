@@ -1,7 +1,7 @@
 import { Hono } from 'hono';
 import { zValidator } from '@hono/zod-validator';
 import { z } from 'zod';
-import type { Env } from '../types';
+import type { Env } from '../env';
 import { getActiveProducts, getProductsByIds, createLead } from '../lib/db';
 import { callDeepSeek } from '../lib/deepseek';
 import { fallbackScore } from '../lib/fallback';

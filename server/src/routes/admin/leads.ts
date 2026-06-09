@@ -1,5 +1,5 @@
 import { Hono } from 'hono';
-import type { Env } from '../../types';
+import type { Env } from '../../env';
 import { getLeads, getAllLeads } from '../../lib/db';
 import { requireAuth } from '../../lib/auth';
 

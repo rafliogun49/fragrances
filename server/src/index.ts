@@ -1,6 +1,6 @@
 import { Hono } from 'hono';
 import { cors } from 'hono/cors';
-import type { Env } from './types';
+import type { Env } from './env';
 import { recommendRouter } from './routes/recommend';
 import { productsRouter } from './routes/products';
 import { adminAuthRouter } from './routes/admin/auth';

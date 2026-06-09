@@ -1,7 +1,7 @@
 import { Hono } from 'hono';
 import { zValidator } from '@hono/zod-validator';
 import { z } from 'zod';
-import type { Env } from '../../types';
+import type { Env } from '../../env';
 import { getAdminUser } from '../../lib/db';
 import { verifyPassword, signSession, makeSessionCookie, clearSessionCookie } from '../../lib/auth';
 
