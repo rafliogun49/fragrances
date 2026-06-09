@@ -118,12 +118,41 @@ export function ProductCard({ product, explanation, size = 'sm' }: ProductCardPr
         </p>
 
         {explanation && (
-          <p className="text-sm" style={{ color: 'var(--color-muted)', lineHeight: '1.6' }}>
-            {explanation}
-          </p>
+          <div
+            className="p-4"
+            style={{
+              backgroundColor: 'rgba(201,169,110,0.05)',
+              border: '1px solid rgba(201,169,110,0.15)',
+              borderRadius: 'var(--r-sm)',
+            }}
+          >
+            <p
+              className="text-xs tracking-widest uppercase mb-1.5"
+              style={{ color: 'var(--color-primary)', letterSpacing: '0.12em' }}
+            >
+              Why this suits you
+            </p>
+            <p className="text-sm" style={{ color: 'var(--color-ink)', lineHeight: '1.8' }}>
+              {explanation}
+            </p>
+          </div>
         )}
 
-        <a
+        {(product.top_notes.length > 0 || product.heart_notes.length > 0 || product.base_notes.length > 0) && (
+          <div className="flex flex-col gap-1.5 text-xs" style={{ color: 'var(--color-muted)' }}>
+            {product.top_notes.length > 0 && (
+              <p><span className="uppercase tracking-widest" style={{ color: 'var(--color-primary)', fontSize: '0.65rem' }}>Top</span>{'  '}{product.top_notes.join(', ')}</p>
+            )}
+            {product.heart_notes.length > 0 && (
+              <p><span className="uppercase tracking-widest" style={{ color: 'var(--color-primary)', fontSize: '0.65rem' }}>Heart</span>{'  '}{product.heart_notes.join(', ')}</p>
+            )}
+            {product.base_notes.length > 0 && (
+              <p><span className="uppercase tracking-widest" style={{ color: 'var(--color-primary)', fontSize: '0.65rem' }}>Base</span>{'  '}{product.base_notes.join(', ')}</p>
+            )}
+          </div>
+        )}
+
+        <
           href={product.product_url || 'https://madeforhmns.com/collections/all'}
           target="_blank"
           rel="noopener noreferrer"
