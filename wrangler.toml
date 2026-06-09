@@ -11,3 +11,10 @@ binding = "ASSETS"
 binding = "DB"
 database_name = "hmns-db"
 database_id = "fcdaf03d-eaa8-41c5-ac3c-cc3e896ee7a9"
+
+[observability.logs]
+enabled = true
+invocation_logs = true
+
+[observability.traces]
+enabled = true
