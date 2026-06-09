@@ -109,6 +109,7 @@ function buildCatalogSummary(products: Product[]): string {
       name: p.name,
       type: p.type,
       scent_family: p.scent_family,
+      gender: p.gender,
       texture: p.scent_texture,
       intensity: p.intensity,
       top: p.top_notes,
