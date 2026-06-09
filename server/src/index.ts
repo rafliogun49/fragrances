@@ -27,7 +27,11 @@ app.get('/api/health', (c) => c.json({ ok: true, ts: new Date().toISOString() })
 
 // Serve SPA for all other routes (Cloudflare Workers Assets)
 app.all('*', async (c) => {
-  return c.env.ASSETS.fetch(c.req.raw);
+  const res = await c.env.ASSETS.fetch(c.req.raw);
+  if (res.status === 404) {
+    return c.env.ASSETS.fetch(new Request(new URL('/', c.req.url).toString()));
+  }
+  return res;
 });
 
 export default app;
