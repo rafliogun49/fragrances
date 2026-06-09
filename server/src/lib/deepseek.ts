@@ -150,7 +150,7 @@ Rules:
 - primary_id: the single best matching product id
 - alternate_ids: array of exactly 2 other good match product ids
 - explanation: 2–3 sentences written directly to the customer (use "you"), referencing their persona and why this fragrance fits who they are
-- alt_explanations: array of exactly 2 short (1 sentence each) explanations for the alternates
+- alt_explanations: array of exactly 2 explanations (2 sentences each) for the alternates — reference the customer's specific personality traits, scent preferences, or occasions from their profile, and explain why this fragrance fits them personally
 - ${langInstruction}
 - If the customer profile lists notes to avoid, you MUST NOT include any product that contains those notes in primary_id or alternate_ids. This is a strict rule — violating it is a critical error.
 

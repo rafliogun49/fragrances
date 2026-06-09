@@ -152,7 +152,7 @@ export function ProductCard({ product, explanation, size = 'sm' }: ProductCardPr
           </div>
         )}
 
-        <
+        <a
           href={product.product_url || 'https://madeforhmns.com/collections/all'}
           target="_blank"
           rel="noopener noreferrer"

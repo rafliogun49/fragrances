@@ -69,9 +69,14 @@ recommendRouter.post(
       alternates = top3.slice(1, 3);
       const occasionStr = answers.occasion.join(', ');
       explanation = `Based on your scent instincts and the moments that matter to you (${occasionStr}), ${primaryProduct?.name ?? 'this fragrance'} is your closest match from the HMNS collection.`;
+      const occasionLabel = answers.occasion.join(' & ');
       altExplanations = [
-        alternates[0] ? `${alternates[0].name} shares your sensory preferences and ${alternates[0].scent_family} character.` : '',
-        alternates[1] ? `${alternates[1].name} suits your lifestyle with its ${alternates[1].intensity ?? 'balanced'} intensity.` : '',
+        alternates[0]
+          ? `${alternates[0].name} aligns with your ${answers.vibe.replace('_', ' ')} energy and ${alternates[0].scent_family} character. Its ${alternates[0].intensity ?? 'balanced'} intensity suits the way you want to arrive — ${answers.room_arrival.replace('_', ' ')}.`
+          : '',
+        alternates[1]
+          ? `${alternates[1].name} matches your scent memory and fits your ${occasionLabel} moments. The ${alternates[1].scent_family} profile echoes the hidden side of you that is ${answers.hidden_self.replace(/_/g, ' ')}.`
+          : '',
       ];
     }
 
