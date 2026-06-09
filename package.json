@@ -6,7 +6,7 @@
     "dev": "concurrently \"npm run dev:web\" \"npm run dev:worker\"",
     "dev:web": "npm run dev --prefix web",
     "dev:worker": "wrangler dev --port 8787",
-    "build": "npm run build --prefix web && echo 'Web built. Run wrangler deploy to deploy.'",
+    "build": "npm ci --prefix web && npm run build --prefix web",
     "db:seed:local": "bash scripts/seed-local.sh",
     "db:migrate:local": "wrangler d1 execute hmns-db --local --file=migrations/001_schema.sql && wrangler d1 execute hmns-db --local --file=migrations/002_seed.sql"
   },
