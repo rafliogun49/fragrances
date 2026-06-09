@@ -16,7 +16,7 @@ type Translations = {
   q_how_people_see: string;
   q_scent_draw: string;
   q_occasion: string;
-  q_room_arrival: string;
+  q_scent_gender: string;
   q_scent_memory: string;
   q_hidden_self: string;
   q_notes_love: string;
@@ -62,9 +62,9 @@ type Translations = {
   o_always: string;
 
   // Q6 options
-  o_invisible: string;
-  o_present: string;
-  o_commanding: string;
+  o_masc: string;
+  o_fem: string;
+  o_versatile: string;
 
   // Q7 options
   o_rain: string;
@@ -134,7 +134,7 @@ export const t: Record<Lang, Translations> = {
     q_how_people_see: 'What do people always say about you?',
     q_scent_draw: 'What do you want a scent to do?',
     q_occasion: 'When do you want to smell amazing?',
-    q_room_arrival: 'How do you want to arrive in a room?',
+    q_scent_gender: 'Which direction does your scent lean?',
     q_scent_memory: 'Which scent memory is closest to yours?',
     q_hidden_self: 'One thing nobody really knows about you.',
     q_notes_love: 'Which notes do you always gravitate toward?',
@@ -174,9 +174,9 @@ export const t: Record<Lang, Translations> = {
     o_event: 'A night out',
     o_always: 'Just for me, always',
 
-    o_invisible: 'Invisible but undeniable',
-    o_present: 'Present, not loud',
-    o_commanding: 'Commanding, full stop',
+    o_masc: 'Masculine',
+    o_fem: 'Feminine',
+    o_versatile: 'Versatile / Unisex',
 
     o_rain: 'Rain hitting warm pavement',
     o_sweet_kitchen: 'Someone\'s kitchen, sweet and warm',
@@ -239,7 +239,7 @@ export const t: Record<Lang, Translations> = {
     q_how_people_see: 'Apa yang selalu dikatakan orang tentangmu?',
     q_scent_draw: 'Apa yang kamu ingin dilakukan oleh sebuah wewangian?',
     q_occasion: 'Kapan kamu ingin bau harum?',
-    q_room_arrival: 'Bagaimana kamu ingin hadir di sebuah ruangan?',
+    q_scent_gender: 'Ke mana aroma yang kamu inginkan cenderung?',
     q_scent_memory: 'Ingatan aroma mana yang paling dekat denganmu?',
     q_hidden_self: 'Satu hal yang tidak banyak orang tahu tentangmu.',
     q_notes_love: 'Aroma apa yang selalu membuatmu tertarik?',
@@ -279,9 +279,9 @@ export const t: Record<Lang, Translations> = {
     o_event: 'Malam keluar',
     o_always: 'Hanya untukku, setiap saat',
 
-    o_invisible: 'Tak terlihat tapi tak bisa diabaikan',
-    o_present: 'Hadir, tidak berlebihan',
-    o_commanding: 'Dominan, titik',
+    o_masc: 'Maskulin',
+    o_fem: 'Feminin',
+    o_versatile: 'Versatile / Unisex',
 
     o_rain: 'Hujan menghantam aspal yang hangat',
     o_sweet_kitchen: 'Dapur seseorang, manis dan hangat',

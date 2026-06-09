@@ -9,10 +9,10 @@ const SCENT_DRAW_TO_TEXTURE: Record<string, string> = {
   bright_instant: 'sweet',
 };
 
-const ROOM_ARRIVAL_TO_INTENSITY: Record<string, string> = {
-  invisible: 'subtle',
-  present: 'balanced',
-  commanding: 'bold',
+const SCENT_GENDER_TO_PRODUCT_GENDER: Record<string, string> = {
+  masc: 'masc',
+  fem: 'fem',
+  versatile: 'unisex',
 };
 
 const SCENT_MEMORY_BOOSTS: Record<string, string[]> = {
@@ -54,8 +54,11 @@ export function clientFallbackScore(products: Product[], answers: QuizAnswers): 
       const texture = SCENT_DRAW_TO_TEXTURE[answers.scent_draw];
       if (p.scent_texture === texture) score += 3;
 
-      const intensity = ROOM_ARRIVAL_TO_INTENSITY[answers.room_arrival];
-      if (p.intensity === intensity) score += 2;
+      const preferredGender = SCENT_GENDER_TO_PRODUCT_GENDER[answers.scent_gender];
+      if (p.gender) {
+        if (p.gender === preferredGender) score += 3;
+        else if (p.gender === 'unisex') score += 1;
+      }
 
       const occasionMatches = answers.occasion.filter(
         occ => occ === 'always' || p.occasion_tags.includes(occ)

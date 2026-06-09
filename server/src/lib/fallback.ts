@@ -10,11 +10,11 @@ const SCENT_DRAW_TO_TEXTURE: Record<string, string> = {
   bright_instant: 'sweet',
 };
 
-// Maps room_arrival answer → intensity
-const ROOM_ARRIVAL_TO_INTENSITY: Record<string, string> = {
-  invisible: 'subtle',
-  present: 'balanced',
-  commanding: 'bold',
+// Maps scent_gender answer → product.gender
+const SCENT_GENDER_TO_PRODUCT_GENDER: Record<string, string> = {
+  masc: 'masc',
+  fem: 'fem',
+  versatile: 'unisex',
 };
 
 // Maps scent_memory → scent family keywords
@@ -95,10 +95,11 @@ function scoreProduct(product: Product, answers: QuizAnswers): number {
     score += 3;
   }
 
-  // Intensity match: +2
-  const intensity = ROOM_ARRIVAL_TO_INTENSITY[answers.room_arrival];
-  if (product.intensity && product.intensity === intensity) {
-    score += 2;
+  // Gender match: +3 exact, +1 for unisex products regardless of preference
+  const preferredGender = SCENT_GENDER_TO_PRODUCT_GENDER[answers.scent_gender];
+  if (product.gender) {
+    if (product.gender === preferredGender) score += 3;
+    else if (product.gender === 'unisex') score += 1;
   }
 
   // Occasion match: +2 per matching occasion, capped at +4

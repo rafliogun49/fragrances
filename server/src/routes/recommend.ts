@@ -12,7 +12,7 @@ const QuizAnswersSchema = z.object({
   how_people_see: z.enum(['makes_fun', 'mysterious', 'feels_home', 'deeply_herself', 'always_interesting', 'just_goes_for_it']),
   scent_draw: z.enum(['unfolds', 'one_note', 'clean_real', 'warm_familiar', 'unexpected', 'bright_instant']),
   occasion: z.array(z.enum(['daily', 'work', 'date', 'event', 'always'])).min(1),
-  room_arrival: z.enum(['invisible', 'present', 'commanding']),
+  scent_gender: z.enum(['masc', 'fem', 'versatile']),
   scent_memory: z.enum(['rain', 'sweet_kitchen', 'flower_market', 'old_paper', 'salt_air', 'warm_wax']),
   hidden_self: z.enum(['hopeless_romantic', 'wilder', 'deeply_tender', 'darker_complex', 'softer', 'more_playful']),
   notes_love: z.array(z.string()).default([]),
@@ -72,7 +72,7 @@ recommendRouter.post(
       const occasionLabel = answers.occasion.join(' & ');
       altExplanations = [
         alternates[0]
-          ? `${alternates[0].name} aligns with your ${answers.vibe.replace('_', ' ')} energy and ${alternates[0].scent_family} character. Its ${alternates[0].intensity ?? 'balanced'} intensity suits the way you want to arrive — ${answers.room_arrival.replace('_', ' ')}.`
+          ? `${alternates[0].name} aligns with your ${answers.vibe.replace('_', ' ')} energy and ${alternates[0].scent_family} character. Its ${alternates[0].intensity ?? 'balanced'} intensity and ${answers.scent_gender} direction make it a natural fit.`
           : '',
         alternates[1]
           ? `${alternates[1].name} matches your scent memory and fits your ${occasionLabel} moments. The ${alternates[1].scent_family} profile echoes the hidden side of you that is ${answers.hidden_self.replace(/_/g, ' ')}.`

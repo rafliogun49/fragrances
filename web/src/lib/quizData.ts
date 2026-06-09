@@ -68,12 +68,12 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
     ],
   },
   {
-    key: 'room_arrival',
-    questionKey: 'q_room_arrival',
+    key: 'scent_gender',
+    questionKey: 'q_scent_gender',
     options: [
-      { value: 'invisible', labelKey: 'o_invisible' },
-      { value: 'present', labelKey: 'o_present' },
-      { value: 'commanding', labelKey: 'o_commanding' },
+      { value: 'masc', labelKey: 'o_masc' },
+      { value: 'fem', labelKey: 'o_fem' },
+      { value: 'versatile', labelKey: 'o_versatile' },
     ],
   },
   {

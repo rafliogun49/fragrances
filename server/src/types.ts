@@ -4,7 +4,7 @@ export type QuizAnswers = {
   how_people_see: 'makes_fun' | 'mysterious' | 'feels_home' | 'deeply_herself' | 'always_interesting' | 'just_goes_for_it';
   scent_draw: 'unfolds' | 'one_note' | 'clean_real' | 'warm_familiar' | 'unexpected' | 'bright_instant';
   occasion: Array<'daily' | 'work' | 'date' | 'event' | 'always'>;
-  room_arrival: 'invisible' | 'present' | 'commanding';
+  scent_gender: 'masc' | 'fem' | 'versatile';
   scent_memory: 'rain' | 'sweet_kitchen' | 'flower_market' | 'old_paper' | 'salt_air' | 'warm_wax';
   hidden_self: 'hopeless_romantic' | 'wilder' | 'deeply_tender' | 'darker_complex' | 'softer' | 'more_playful';
   notes_love: string[];
