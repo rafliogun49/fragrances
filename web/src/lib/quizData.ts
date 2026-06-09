@@ -3,7 +3,8 @@ export type QuizQuestion = {
   questionKey: string;
   options: { value: string; labelKey: string }[];
   multiSelect?: boolean;
-  allowCustom?: boolean; // shows a free-text input at the bottom
+  allowCustom?: boolean;
+  twoCol?: boolean;
 };
 
 export const QUIZ_QUESTIONS: QuizQuestion[] = [
@@ -105,15 +106,24 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
     questionKey: 'q_notes_love',
     multiSelect: true,
     allowCustom: true,
+    twoCol: true,
     options: [
       { value: 'rose', labelKey: 'o_note_rose' },
       { value: 'vanilla', labelKey: 'o_note_vanilla' },
-      { value: 'wood', labelKey: 'o_note_wood' },
-      { value: 'citrus', labelKey: 'o_note_citrus' },
       { value: 'jasmine', labelKey: 'o_note_jasmine' },
-      { value: 'patchouli', labelKey: 'o_note_patchouli' },
       { value: 'musk', labelKey: 'o_note_musk' },
+      { value: 'iris', labelKey: 'o_note_iris' },
       { value: 'oud', labelKey: 'o_note_oud' },
+      { value: 'citrus', labelKey: 'o_note_citrus' },
+      { value: 'wood', labelKey: 'o_note_wood' },
+      { value: 'fruity', labelKey: 'o_note_fruity' },
+      { value: 'vetiver', labelKey: 'o_note_vetiver' },
+      { value: 'fresh', labelKey: 'o_note_fresh' },
+      { value: 'spice', labelKey: 'o_note_spice' },
+      { value: 'lavender', labelKey: 'o_note_lavender' },
+      { value: 'tobacco', labelKey: 'o_note_tobacco' },
+      { value: 'marine', labelKey: 'o_note_marine' },
+      { value: 'gourmand', labelKey: 'o_note_gourmand' },
     ],
   },
   {
@@ -121,15 +131,24 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
     questionKey: 'q_notes_avoid',
     multiSelect: true,
     allowCustom: true,
+    twoCol: true,
     options: [
       { value: 'rose', labelKey: 'o_note_rose' },
       { value: 'vanilla', labelKey: 'o_note_vanilla' },
-      { value: 'wood', labelKey: 'o_note_wood' },
-      { value: 'citrus', labelKey: 'o_note_citrus' },
       { value: 'jasmine', labelKey: 'o_note_jasmine' },
-      { value: 'patchouli', labelKey: 'o_note_patchouli' },
       { value: 'musk', labelKey: 'o_note_musk' },
+      { value: 'iris', labelKey: 'o_note_iris' },
       { value: 'oud', labelKey: 'o_note_oud' },
+      { value: 'citrus', labelKey: 'o_note_citrus' },
+      { value: 'wood', labelKey: 'o_note_wood' },
+      { value: 'fruity', labelKey: 'o_note_fruity' },
+      { value: 'vetiver', labelKey: 'o_note_vetiver' },
+      { value: 'fresh', labelKey: 'o_note_fresh' },
+      { value: 'spice', labelKey: 'o_note_spice' },
+      { value: 'lavender', labelKey: 'o_note_lavender' },
+      { value: 'tobacco', labelKey: 'o_note_tobacco' },
+      { value: 'marine', labelKey: 'o_note_marine' },
+      { value: 'gourmand', labelKey: 'o_note_gourmand' },
     ],
   },
 ];

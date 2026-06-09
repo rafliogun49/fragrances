@@ -85,12 +85,20 @@ type Translations = {
   // Q9 + Q10 note options
   o_note_rose: string;
   o_note_vanilla: string;
-  o_note_wood: string;
-  o_note_citrus: string;
   o_note_jasmine: string;
-  o_note_patchouli: string;
   o_note_musk: string;
+  o_note_iris: string;
   o_note_oud: string;
+  o_note_citrus: string;
+  o_note_wood: string;
+  o_note_fruity: string;
+  o_note_vetiver: string;
+  o_note_fresh: string;
+  o_note_spice: string;
+  o_note_lavender: string;
+  o_note_tobacco: string;
+  o_note_marine: string;
+  o_note_gourmand: string;
 
   // Email gate
   matchReady: string;
@@ -194,12 +202,20 @@ export const t: Record<Lang, Translations> = {
 
     o_note_rose: 'Rose',
     o_note_vanilla: 'Vanilla',
-    o_note_wood: 'Sandalwood / Wood',
-    o_note_citrus: 'Citrus / Bergamot',
-    o_note_jasmine: 'Jasmine',
-    o_note_patchouli: 'Patchouli',
+    o_note_jasmine: 'Jasmine / Floral',
     o_note_musk: 'Musk / Amber',
-    o_note_oud: 'Oud',
+    o_note_iris: 'Iris / Violet',
+    o_note_oud: 'Oud / Incense',
+    o_note_citrus: 'Citrus / Bergamot',
+    o_note_wood: 'Sandalwood / Cedar',
+    o_note_fruity: 'Fruity / Peach',
+    o_note_vetiver: 'Vetiver / Earthy',
+    o_note_fresh: 'Fresh / Green',
+    o_note_spice: 'Spice / Pepper',
+    o_note_lavender: 'Lavender / Herbs',
+    o_note_tobacco: 'Tobacco / Leather',
+    o_note_marine: 'Marine / Sea Salt',
+    o_note_gourmand: 'Gourmand / Sweet',
 
     matchReady: 'Your match is ready.',
     matchReadySub: 'Enter your email to see your results — we\'ll save your personalised recommendation.',
@@ -299,12 +315,20 @@ export const t: Record<Lang, Translations> = {
 
     o_note_rose: 'Rose / Mawar',
     o_note_vanilla: 'Vanilla',
-    o_note_wood: 'Sandalwood / Kayu',
-    o_note_citrus: 'Citrus / Jeruk',
     o_note_jasmine: 'Jasmine / Melati',
-    o_note_patchouli: 'Patchouli',
     o_note_musk: 'Musk / Amber',
-    o_note_oud: 'Oud / Gaharu',
+    o_note_iris: 'Iris / Violet',
+    o_note_oud: 'Oud / Kemenyan',
+    o_note_citrus: 'Citrus / Jeruk',
+    o_note_wood: 'Sandalwood / Cedar',
+    o_note_fruity: 'Buah / Persik',
+    o_note_vetiver: 'Vetiver / Tanah',
+    o_note_fresh: 'Segar / Hijau',
+    o_note_spice: 'Rempah / Lada',
+    o_note_lavender: 'Lavender / Herbal',
+    o_note_tobacco: 'Tembakau / Kulit',
+    o_note_marine: 'Marine / Laut',
+    o_note_gourmand: 'Gourmand / Manis',
 
     matchReady: 'Parfummu sudah siap.',
     matchReadySub: 'Masukkan emailmu untuk melihat hasilmu — kami akan menyimpan rekomendasimu.',

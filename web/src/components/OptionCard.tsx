@@ -4,14 +4,15 @@ type OptionCardProps = {
   selected: boolean;
   onClick: () => void;
   multiSelect?: boolean;
+  compact?: boolean;
 };
 
-export function OptionCard({ label, selected, onClick, multiSelect }: OptionCardProps) {
+export function OptionCard({ label, selected, onClick, multiSelect, compact }: OptionCardProps) {
   return (
     <button
       type="button"
       onClick={onClick}
-      className="w-full text-left px-5 py-4 rounded-md border-2 transition-all duration-150 font-medium"
+      className={`w-full text-left border-2 transition-all duration-150 font-medium ${compact ? 'px-3 py-3 text-sm' : 'px-5 py-4'}`}
       style={{
         borderColor: selected ? 'var(--color-primary)' : 'var(--color-hairline)',
         backgroundColor: selected ? 'rgba(255,56,92,0.04)' : 'var(--color-canvas)',

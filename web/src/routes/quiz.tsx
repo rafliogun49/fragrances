@@ -175,7 +175,7 @@ function QuizPage() {
 
             {!question.multiSelect && <div className="mb-6" />}
 
-            <div className="flex flex-col gap-3">
+            <div className={question.twoCol ? 'grid grid-cols-2 gap-2' : 'flex flex-col gap-3'}>
               {question.options.map(opt => (
                 <OptionCard
                   key={opt.value}
@@ -184,6 +184,7 @@ function QuizPage() {
                   selected={isSelected(opt.value)}
                   onClick={() => selectAnswer(opt.value)}
                   multiSelect={question.multiSelect}
+                  compact={question.twoCol}
                 />
               ))}
             </div>

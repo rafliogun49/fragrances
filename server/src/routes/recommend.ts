@@ -3,7 +3,7 @@ import { zValidator } from '@hono/zod-validator';
 import { z } from 'zod';
 import type { Env } from '../env';
 import { getActiveProducts, getProductsByIds, createLead } from '../lib/db';
-import { callDeepSeek } from '../lib/deepseek';
+import { callDeepSeek } from '../lib/aiMatcher';
 import { fallbackScore } from '../lib/fallback';
 
 const QuizAnswersSchema = z.object({
