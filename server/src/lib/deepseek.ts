@@ -1,7 +1,7 @@
 import type { Product, QuizAnswers } from '../types';
 
 const OPENROUTER_URL = 'https://openrouter.ai/api/v1/chat/completions';
-const OPENROUTER_MODEL = 'anthropic/claude-haiku-4-5';
+const OPENROUTER_MODEL = 'xiaomi/mimo-v2-flash';
 const TIMEOUT_MS = 8000;
 
 const VIBE_LABELS: Record<string, string> = {
@@ -40,10 +40,10 @@ const SCENT_DRAW_LABELS: Record<string, string> = {
   bright_instant: 'Bright and instant — a mood in one spray',
 };
 
-const ROOM_ARRIVAL_LABELS: Record<string, string> = {
-  invisible: 'Invisible but undeniable',
-  present: 'Present, not loud',
-  commanding: 'Commanding, full stop',
+const SCENT_GENDER_LABELS: Record<string, string> = {
+  masc: 'Masculine',
+  fem: 'Feminine',
+  versatile: 'Versatile / Unisex',
 };
 
 const SCENT_MEMORY_LABELS: Record<string, string> = {
@@ -88,7 +88,7 @@ function humanizeAnswers(answers: QuizAnswers): string {
     `How people experience them: ${HOW_PEOPLE_SEE_LABELS[answers.how_people_see] ?? answers.how_people_see}`,
     `Drawn to in a scent: ${SCENT_DRAW_LABELS[answers.scent_draw] ?? answers.scent_draw}`,
     `When they want to smell amazing: ${occasionStr}`,
-    `How they want to arrive in a room: ${ROOM_ARRIVAL_LABELS[answers.room_arrival] ?? answers.room_arrival}`,
+    `Scent direction preference: ${SCENT_GENDER_LABELS[answers.scent_gender] ?? answers.scent_gender}`,
     `Scent memory: ${SCENT_MEMORY_LABELS[answers.scent_memory] ?? answers.scent_memory}`,
     `Hidden self: ${HIDDEN_SELF_LABELS[answers.hidden_self] ?? answers.hidden_self}`,
     answers.notes_love?.length
